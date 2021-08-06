@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/addNewNoteFragment">
+    app:startDestination="@id/startFragment">
 
     <fragment
         android:id="@+id/addNewNoteFragment"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.noteproject.screens.MainFragment"
+        android:name="com.example.noteproject.screens.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.noteproject.screens.StartFragment"
+        android:name="com.example.noteproject.screens.start.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
