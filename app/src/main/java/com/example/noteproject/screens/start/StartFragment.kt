@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.noteproject.R
 import com.example.noteproject.databinding.FragmentStartBinding
@@ -37,7 +36,7 @@ class StartFragment : Fragment() {
         mViewModel = ViewModelProvider(this).get(StartFragmentViewModel::class.java)
         mBinding.btnRoom.setOnClickListener {
             mViewModel.initDatabase(TYPE_ROOM){
-                APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_mainFragment)
+                APP_ACTIVITY.navController.navigate(R.id.action_startFragment_to_mainFragment)
             }
         }
     }
