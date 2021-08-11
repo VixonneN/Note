@@ -8,4 +8,8 @@ interface DatabaseRepository {
     val allNotes:LiveData<List<AppNote>>
     suspend fun insert(note: AppNote, onSuccess:() -> Unit)
     suspend fun delete(note: AppNote, onSuccess:() -> Unit)
+
+    fun connentToDatabase(onSuccess: () -> Unit, onFail: (String) -> Unit){}
+
+    fun signOut(){}
 }
