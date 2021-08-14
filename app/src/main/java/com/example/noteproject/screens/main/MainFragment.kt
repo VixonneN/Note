@@ -10,6 +10,7 @@ import com.example.noteproject.R
 import com.example.noteproject.databinding.FragmentMainBinding
 import com.example.noteproject.models.AppNote
 import com.example.noteproject.utilits.APP_ACTIVITY
+import com.example.noteproject.utilits.AppPreference
 
 class MainFragment : Fragment() {
 
@@ -78,6 +79,7 @@ class MainFragment : Fragment() {
         when(item.itemId){
             R.id.btn_exit_fb -> {
                 mViewModel.signout()
+                AppPreference.setInitUser(false)
                 APP_ACTIVITY.navController.navigate(R.id.action_mainFragment_to_startFragment)
 
             }
